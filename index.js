@@ -29,6 +29,10 @@ app.get('/messages/index', (req, res) => {
     res.json({ value: messages });
 })
 
+app.get('/',(req,res)=>{
+    res.json('API')
+})
+
 app.post('/messages/create', (req, res) => {
     const { message, name } = req.body;
     const msm = {
