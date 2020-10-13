@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const app = express();
-const port = 3333;
+const port = process.env.PORT || 3333;
 
 
 
@@ -29,7 +29,7 @@ app.get('/messages/index', (req, res) => {
     res.json({ value: messages });
 })
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.json('API')
 })
 
